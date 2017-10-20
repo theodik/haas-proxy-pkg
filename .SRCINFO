@@ -1,0 +1,17 @@
+pkgbase = haas-proxy
+	pkgdesc = Honeypot proxy is tool for redirectiong SSH session from local computer to server of HaaS with additional information.
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://haas.nic.cz/
+	install = haas-proxy.install
+	arch = any
+	license = GPL3
+	depends = python-twisted
+	depends = python-cryptography
+	depends = python-pyasn1
+	depends = sshpass
+	source = https://gitlab.labs.nic.cz/haas/proxy/raw/master/release/haas-proxy-1.1.tar.gz
+	md5sums = 66d9c1e7b27fbff128a4cd280768041c
+
+pkgname = haas-proxy
+

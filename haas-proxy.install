@@ -1,0 +1,3 @@
+post_install() {
+	echo "Set your device token in /etc/haas-proxy.conf"
+}

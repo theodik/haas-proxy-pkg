@@ -1,0 +1,17 @@
+[Unit]
+Description=Honeypot Proxy
+
+[Service]
+EnvironmentFile=/etc/haas-proxy.conf
+Type=forking
+PIDFile=/var/run/haas.pid
+ExecStart=/usr/bin/python \
+	-m haas_proxy \
+  -l /var/log/haas.log \
+	--pidfile /var/run/haas.pid haas_proxy \
+  --device-token $DEVICE_TOKEN
+
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
